@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registrasi Techno IT</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="container">
+    <section class="form-card">
+      <header class="form-header">
+        <span class="label-top">REGISTRASI EVENT</span>
+        <h1>Techno IT</h1>
+        <p>Isi data peserta, pilih sesi, dan unggah bukti identitas (KTM/KTP).</p>
+        <p class="required-info">* Wajib diisi</p>
+      </header>
+
+      <div id="status" class="status" role="status" hidden></div>
+
+      <!-- novalidate: pesan error ditampilkan oleh js/validasi.js. Atribut HTML5 tetap dipertahankan. -->
+      <form id="form-event" action="/proses-registrasi" method="post" enctype="multipart/form-data" novalidate>
+
+        <div class="form-group">
+          <label for="nama">Nama Lengkap *</label>
+          <input type="text" id="nama" name="nama" minlength="3" maxlength="60" pattern="[A-Za-z .'\-]{3,60}" placeholder="Contoh: Karel Abimanyu" required>
+          <small class="hint">3-60 karakter, hanya huruf dan spasi.</small>
+          <small class="error" id="err-nama" role="alert"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="email" placeholder="karelabimanyu@email.com" required>
+          <small class="hint">Tiket dan konfirmasi dikirim ke email ini.</small>
+          <small class="error" id="err-email" role="alert"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="telepon">Nomor Telepon *</label>
+          <input type="text" id="telepon" name="telepon" inputmode="numeric" pattern="08[0-9]{8,11}" minlength="10" maxlength="13" placeholder="Contoh: 081234567890" required>
+          <small class="hint">Diawali 08, total 10-13 digit angka tanpa spasi.</small>
+          <small class="error" id="err-telepon" role="alert"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="sesi">Sesi Event *</label>
+          <select id="sesi" name="sesi" required>
+            <option value="">-- Pilih Sesi --</option>
+            <option value="pagi">Sesi Pagi (09.00-12.00)</option>
+            <option value="siang">Sesi Siang (13.00-16.00)</option>
+            <option value="online">Sesi Online (Zoom)</option>
+          </select>
+          <small class="error" id="err-sesi" role="alert"></small>
+        </div>
+
+        <fieldset id="fs-tiket">
+          <legend>Jenis Tiket *</legend>
+          <div class="option">
+            <input type="radio" id="mahasiswa" name="tiket" value="mahasiswa" required>
+            <label for="mahasiswa">Mahasiswa (wajib unggah KTM)</label>
+          </div>
+          <div class="option">
+            <input type="radio" id="umum" name="tiket" value="umum">
+            <label for="umum">Umum</label>
+          </div>
+          <div class="option">
+            <input type="radio" id="vip" name="tiket" value="vip">
+            <label for="vip">VIP (termasuk sertifikat dan materi)</label>
+          </div>
+          <small class="error" id="err-tiket" role="alert"></small>
+        </fieldset>
+
+        <fieldset id="fs-topik">
+          <legend>Topik yang Diminati *</legend>
+          <p class="instruction">Pilih minimal satu topik.</p>
+          <div class="option">
+            <input type="checkbox" id="html" name="topik[]" value="html-css">
+            <label for="html">HTML &amp; CSS</label>
+          </div>
+          <div class="option">
+            <input type="checkbox" id="js" name="topik[]" value="javascript">
+            <label for="js">JavaScript</label>
+          </div>
+          <div class="option">
+            <input type="checkbox" id="backend" name="topik[]" value="backend">
+            <label for="backend">Back-End &amp; Database</label>
+          </div>
+          <div class="option">
+            <input type="checkbox" id="uiux" name="topik[]" value="uiux">
+            <label for="uiux">UI/UX</label>
+          </div>
+          <small class="error" id="err-topik" role="alert"></small>
+        </fieldset>
+
+        <div class="form-group">
+          <label for="harapan">Harapan Mengikuti Event *</label>
+          <textarea id="harapan" name="harapan" rows="5" minlength="30" maxlength="300" placeholder="Ceritakan apa yang ingin Anda pelajari..." required></textarea>
+          <small class="hint">Tuliskan antara 30-300 karakter. <span id="hitung">0/300</span></small>
+          <small class="error" id="err-harapan" role="alert"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="bukti">Upload Bukti Identitas (KTM/KTP) *</label>
+          <input type="file" id="bukti" name="bukti" accept=".pdf,.jpg,.jpeg,.png" required>
+          <small class="hint">Format PDF/JPG/PNG, maksimum 2 MB.</small>
+          <small class="error" id="err-bukti" role="alert"></small>
+        </div>
+
+        <div class="agreement">
+          <input type="checkbox" id="persetujuan" name="persetujuan" value="setuju" required>
+          <label for="persetujuan">Saya menyetujui penggunaan data ini untuk keperluan registrasi event. *</label>
+        </div>
+        <small class="error agreement-error" id="err-persetujuan" role="alert"></small>
+
+        <div class="button-group">
+          <button type="submit" class="btn btn-primary">Daftar Event</button>
+          <button type="reset" class="btn btn-secondary">Bersihkan Form</button>
+        </div>
+      </form>
+    </section>
+  </main>
+  <script src="js/validasi.js"></script>
+</body>
+</html>
