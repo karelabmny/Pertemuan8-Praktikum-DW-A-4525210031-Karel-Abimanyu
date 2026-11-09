@@ -4,7 +4,7 @@ Aplikasi Form Registrasi Event Techno IT merupakan halaman pendaftaran event tek
 
 Project ini dibuat sebagai tugas individu Praktikum Desain Web (Pertemuan 8) untuk menerapkan berbagai komponen form serta validasi input pada sisi Front-End.
 
-## ✨ Fitur Utama
+##  Fitur Utama
 
 - **Nama Lengkap**: Input nama peserta.
 - **Email**: Input alamat email peserta.
@@ -26,7 +26,7 @@ Project ini dibuat sebagai tugas individu Praktikum Desain Web (Pertemuan 8) unt
 | CSS3 | Mengatur tampilan dan desain |
 | JavaScript | Membuat validasi input |
 
-## 📁 Struktur Project
+##  Struktur Project
 
 ```
 Pertemuan8-Praktikum-DW-A-4525210031-Karel-Abimanyu/
@@ -60,7 +60,7 @@ Berikut aturan validasi yang diterapkan pada form:
 9. Ukuran file maksimal 2 MB.
 10. Persetujuan penggunaan data wajib dicentang.
 
-## 🚀 Cara Menjalankan Project
+##  Cara Menjalankan Project
 
 1. Download atau clone repository ini.
 2. Buka folder project menggunakan Visual Studio Code.
@@ -70,7 +70,7 @@ Berikut aturan validasi yang diterapkan pada form:
 6. Perhatikan pesan validasi yang muncul apabila terdapat input yang tidak sesuai.
 7. Klik tombol **Bersihkan Form** untuk mengosongkan seluruh isian.
 
-## 🧪 Pengujian Form
+##  Pengujian Form
 
 Pengujian dilakukan dengan mencoba beberapa skenario input yang tidak valid, seperti:
 
@@ -91,8 +91,6 @@ Pengujian dilakukan dengan mencoba beberapa skenario input yang tidak valid, sep
 | 13 | File berukuran lebih dari 2 MB | Muncul pesan ukuran file maksimal 2 MB |
 | 14 | File tidak diunggah | Muncul pesan bukti identitas wajib diunggah |
 | 15 | Persetujuan tidak dicentang | Muncul pesan wajib menyetujui penggunaan data |
-
-Hasil pengujian lengkap beserta hasil aktualnya dapat dilihat pada [DOKUMENTASI.md](DOKUMENTASI.md).
 
 ## Validasi Client-Side
 
