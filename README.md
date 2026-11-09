@@ -18,7 +18,7 @@ Project ini dibuat sebagai tugas individu Praktikum Desain Web (Pertemuan 8) unt
 - **Form Validation**: Memvalidasi seluruh input sebelum pendaftaran dinyatakan berhasil.
 - **Responsive Design**: Tampilan menyesuaikan ukuran layar desktop dan mobile.
 
-## 🛠️ Teknologi yang Digunakan
+##  Teknologi yang Digunakan
 
 | Teknologi | Kegunaan |
 |---|---|
