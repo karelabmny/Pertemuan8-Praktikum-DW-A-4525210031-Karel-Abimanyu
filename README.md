@@ -45,7 +45,7 @@ Pertemuan8-Praktikum-DW-A-4525210031-Karel-Abimanyu/
 
 Struktur kode dipisah menjadi tiga bagian: `index.html` untuk struktur form, `css/style.css` untuk tampilan, dan `js/validasi.js` untuk logika validasi.
 
-## 📋 Aturan Validasi
+##  Aturan Validasi
 
 Berikut aturan validasi yang diterapkan pada form:
 
